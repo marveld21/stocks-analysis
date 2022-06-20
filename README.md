@@ -13,6 +13,7 @@
 ### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist increased efficiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
 
 #### Original code overwriting with each loop
+```
    For i = 0 To 11
        ticker = tickers(i)
        totalVolume = 0
@@ -45,8 +46,9 @@
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
    Next i
-
+```
 #### Refactored code using arrays to store values and writing once when finished
+```
     For i = 2 To RowCount
         
         '3a) Increase volume for current ticker
@@ -91,7 +93,7 @@
         Cells(4 + i, 1).Value = tickers(i)
         Cells(4 + i, 2).Value = tickerVolumes(i)
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
-
+```
 
 # Summary of Code Refactoring
 ### Refactoring code increases code runtime efficiency and makes code easier to read but it can make it more difficult to write initially. A good strategy is to get a piece of code working, then return to the code to refactor.
