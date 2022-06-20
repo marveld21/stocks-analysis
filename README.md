@@ -10,9 +10,9 @@
 ![table of results 2018](https://github.com/marveld21/stocks-analysis/blob/main/Reources/stock_table_2018.png "Results for 2018")
 
 ## Code Refactoring
-### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist in storage increased effiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
+### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist increased effiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
 
-#### Original code
+#### Original code overwriting with each loop
    '4) Loop through tickers
    For i = 0 To 11
        ticker = tickers(i)
@@ -45,20 +45,16 @@
        Cells(4 + i, 1).Value = ticker
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-
    Next i
 
-#### Refactored code
+#### Refactored code using arrays to store values and writing once when finished
     For i = 2 To RowCount
-        
         
         '3a) Increase volume for current ticker
 
-        
         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
         
 
-        
         '3b) Check if the current row is the first row with the selected tickerIndex.
         'If  Then
         
@@ -66,11 +62,8 @@
 
                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
 
-        
-            
-            
         'End If
-        
+
         End If
         
         '3c) check if the current row is the last row with the selected ticker
@@ -106,6 +99,3 @@
 ### Refactoring code increases code run effiencency and makes code easier to read but it can make it more difficult to write intially. A good strategy is to get a piece of code working, then return to the code to refactor.
 
 ### Our original script worked correctly and did not take very long to run. Our refactored script took much longer to write but runs % faster. With such a small dataset it probably was unessasry but as the data scales up the refactored code will increase in value.
-
-0.078
-0.074
