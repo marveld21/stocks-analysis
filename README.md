@@ -1,5 +1,3 @@
-# stocks-analysis
-
 # Overview of Project
 ### Our customer Steve is doing finacial research for his parents on a green energy company DAQO. Steve wants to study both DAQO and some comparible stock tickers to encourage his parents to diversify.
 
@@ -8,7 +6,9 @@
 # Results
 ## Tables
 ### The tables below show the reults of our macro for each year being studied. 
-insert tables
+![table of results 2017](https://github.com/marveld21/stocks-analysis/blob/main/Reources/stock_table_2017.png "Results for 2017")
+![table of results 2018](https://github.com/marveld21/stocks-analysis/blob/main/Reources/stock_table_2018.png "Results for 2018")
+
 ## Code Refactoring
 ### The first code when run with the 2018 and 2017 data completed in ... and ... respectively. Refactoring the code using arrays to assist in storage increased effiency and resulted in the code being run % faster.
 insert example of code array before and after changes.
