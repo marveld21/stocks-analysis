@@ -1,16 +1,16 @@
 # Overview of Project
-### Our customer Steve is doing finacial research for his parents on a green energy company DAQO. Steve wants to study both DAQO and some comparible stock tickers to encourage his parents to diversify.
+### Our customer Steve is doing financial research for his parents on a green energy company DAQO. Steve wants to study both DAQO and some comparable stock tickers to encourage his parents to diversify.
 
 ### The ask from Steve is to create a VBA macro that he can use to compare stock data. Steve would also like to see the speed at which the code runs so that he can measure code performance on different datasets.
 
 # Results
 ## Tables
-### The tables below show the reults of our macro for each year being studied. This should give Steve plenty of information to help his parents. 
+### The tables below show the results of our macro for each year being studied. This should give Steve plenty of information to help his parents. 
 ![table of results 2017](https://github.com/marveld21/stocks-analysis/blob/main/Reources/stock_table_2017.png "Results for 2017")
 ![table of results 2018](https://github.com/marveld21/stocks-analysis/blob/main/Reources/stock_table_2018.png "Results for 2018")
 
 ## Code Refactoring
-### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist increased effiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
+### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist increased efficiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
 
 #### Original code overwriting with each loop
    '4) Loop through tickers
@@ -94,8 +94,7 @@
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
 
 
-
 # Summary of Code Refactoring
-### Refactoring code increases code run effiencency and makes code easier to read but it can make it more difficult to write intially. A good strategy is to get a piece of code working, then return to the code to refactor.
+### Refactoring code increases code runtime efficiency and makes code easier to read but it can make it more difficult to write initially. A good strategy is to get a piece of code working, then return to the code to refactor.
 
-### Our original script worked correctly and did not take very long to run. Our refactored script took much longer to write but runs % faster. With such a small dataset it probably was unessasry but as the data scales up the refactored code will increase in value.
+### Our original script worked correctly and did not take very long to run. Our refactored script took much longer to write but runs much faster. With such a small dataset it probably was unnecessary but as the data scales up the refactored code will increase in value.
