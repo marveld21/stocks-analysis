@@ -13,7 +13,6 @@
 ### The original code when run with the 2017 and 2018 data completed in 0.644 seconds and 0.640 seconds respectively. Refactoring the code using arrays to assist increased efficiency and resulted in the code being run a little more than 8 times faster. Refactored code ran for 2017 and 2018 for 0.078 seconds and 0.074 seconds respectively.
 
 #### Original code overwriting with each loop
-
    For i = 0 To 11
        ticker = tickers(i)
        totalVolume = 0
